@@ -5,14 +5,18 @@ public class MouseController : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D pickedItem;
     public float MouseMoveSpeed;
+
+    public bool IsMouseActive;
     
     void Start()
     {
         mainCamera = Camera.main;
+        IsMouseActive = true;
     }
 
     void Update()
     {
+        if (!IsMouseActive) return;
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());

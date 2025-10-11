@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 581b0aee23d1dd646ae1d4f1712d2c5c
+guid: 335a739036ce89d45887aadebb117983
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3452003437791708593
-    second: Rock_0
-  - first:
-      213: 709247535313551666
-    second: Rock_1
+      213: -4570153536982545689
+    second: Rope_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rock_0
+      name: Rope_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 267
-        height: 208
+        width: 84
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b5800156daf7ef20800000000000000
-      internalID: 3452003437791708593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_1
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 17
-        width: 18
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2318f2820e0c7d900800000000000000
-      internalID: 709247535313551666
+      spriteID: 7ea0923629d8390c0800000000000000
+      internalID: -4570153536982545689
       vertices: []
       indices: 
       edges: []
@@ -160,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rock_0: 3452003437791708593
-      Rock_1: 709247535313551666
+      Rope_0: -4570153536982545689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
