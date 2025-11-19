@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody2D)) ]
+[RequireComponent (typeof(Collider2D)) ]
 public class Key : Pickupable
 {
     public override Rigidbody2D Pickup()
@@ -13,7 +14,8 @@ public class Key : Pickupable
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
         if (other.gameObject.TryGetComponent(out Door door))
         {
             door.Open();

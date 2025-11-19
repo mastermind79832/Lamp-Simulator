@@ -66,6 +66,7 @@ public class PickupController : MonoBehaviour
     {
         if (pickedItem != null)
         {
+            pickedItem.GetComponent<Pickupable>()?.SetMoveSpeed(0);
             pickedItem.gravityScale = 1;
             pickedItem = null;
         }
