@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Axe : MonoBehaviour, IPickupable
+public class Axe : Pickupable
 {
     private Rigidbody2D rb;
     private float CurrentMoveSpeed;
@@ -11,13 +11,14 @@ public class Axe : MonoBehaviour, IPickupable
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public Rigidbody2D Pickup()
+    public override Rigidbody2D Pickup()
     {
         return rb;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnHit(Collision2D collision)
     {
+        Debug.Log("Axe hit something!");
         Debug.Log(rb.linearVelocity.magnitude);
 
         if (collision.gameObject.TryGetComponent(out Boulder boulder))
@@ -25,9 +26,10 @@ public class Axe : MonoBehaviour, IPickupable
             if(CurrentMoveSpeed > boulder.m_SpeedRequiredToDamage)
                 boulder.DecreaseHealth();
         }
+        base.OnHit(collision); // Call the base class method to handle default behavior
     }
 
-    public void SetMoveSpeed(float speed)
+    public override void SetMoveSpeed(float speed)
     {
         CurrentMoveSpeed = speed;
     }

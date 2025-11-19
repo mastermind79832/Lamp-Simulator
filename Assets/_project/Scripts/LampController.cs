@@ -2,12 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class LampController : MonoBehaviour, IPickupable
+public class LampController : Pickupable
 {
 
+    public KeyCode LampPwerToggleKey;
+    public Light LampLight;
     public float MaxFuel;
     private float CurrentFuel;
-
     public float FuelDecreaseAmount;
     public float MoveSpeedLimit; // limit after which fuel decreases faster
     public float FastFuelDecreaseAmount;
@@ -17,7 +18,7 @@ public class LampController : MonoBehaviour, IPickupable
 
     private float CurrentMoveSpeed;
     
-    public Rigidbody2D Pickup()
+    public override Rigidbody2D Pickup()
     {
         return GetComponent<Rigidbody2D>();
     }
@@ -42,7 +43,7 @@ public class LampController : MonoBehaviour, IPickupable
 
     }
 
-    public void SetMoveSpeed(float speed)
+    public override void SetMoveSpeed(float speed)
     {
         CurrentMoveSpeed = speed;
 

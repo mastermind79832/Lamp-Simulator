@@ -1,14 +1,14 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody2D)) ]
-public class Key : MonoBehaviour, IPickupable
+public class Key : Pickupable
 {
-    public Rigidbody2D Pickup()
+    public override Rigidbody2D Pickup()
     {
         return GetComponent<Rigidbody2D>();
     }
 
-    public void SetMoveSpeed(float speed)
+    public override void SetMoveSpeed(float speed)
     {
 
     }
